@@ -1,6 +1,7 @@
 import Appointment from '../models/Appointments'
 import User from '../models/User';
-import { endOfDay } from 'date-fns';
+import { startOfDay, endOfDay, parseISO } from 'date-fns';
+import { Op } from 'sequelize'
 
 class ScheduleController {
     async index(req, res){
